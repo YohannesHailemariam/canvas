@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { DropDown } from '../components/DropDown'
 import Button from '../components/Button'
 import { FaRedo } from "react-icons/fa";
@@ -9,9 +9,10 @@ const ColMiddle = () => {
 
     const a = { name: "Poppins" }
     const b = { name: "Arial"}
-
-    const creatANewTextField = () =>{
-        
+    
+    const [isVisible, setIsVisible] = useState(false);
+    const toggleVisibility = () =>{
+        setIsVisible(true)
     }
   return (
     <div>
@@ -35,8 +36,9 @@ const ColMiddle = () => {
                     <DropDown selectedOption={'Black'} arrayOfOptionItems={[{name: 'Black'},{name: 'White'}]} />
                 </div>
            </div>
-           <Button text={'ADD TEXT'} onClick={creatANewTextField}/>
+           <Button text={'ADD TEXT'} onClick={toggleVisibility}/>
         </div>
+        <input type='text' className={`ml-[600px] ${ isVisible ? 'visible': 'invisible' } border outline-none border-black border-dashed`}/>
     </div>
   )
 }
