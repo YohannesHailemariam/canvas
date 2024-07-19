@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      abc: ["Poppins"]
+      abc: ["Poppins"],
+      def: ["Nunito Sans"]
     }
   },
   plugins: [],
