@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const DropDown = ({ selectedOption, arrayOfOptionItems }) => {
+export const DropDown = ({ selectedOption, arrayOfOptionItems}) => {
   return (
     <div>
-      <select className=' border cursor-pointer rounded-lg shadow-lg'>
+      <select className=' border cursor-pointer rounded-lg shadow-lg' >
         <option disabled selected>{selectedOption}</option>
         {arrayOfOptionItems.map((data, index) => (
-          <option key={index}>
+          <option value={data.name} key={index}>
             {data.name}
           </option>
         ))}
